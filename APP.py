@@ -17,12 +17,12 @@ from PIL import Image
 
 # 使用 Flexbox 布局使标题和图片并排显示
 st.markdown("""
-    <div style="display: flex; align-items: center; justify-content: flex-start;">
+    <div style="display: flex; align-items: center; justify-content: flex-start; margin-bottom: 20px;">
         <!-- 显示图片，减小大小 -->
-        <img src="https://github.com/Dandan-debug/2M-EC/raw/main/endometrial.svg" width="100" alt="Model Image" style="margin-right: 20px;">
+        <img src="https://github.com/Dandan-debug/2M-EC/raw/main/endometrial.svg" width="150" alt="Endometrial Cancer Model Image" style="margin-right: 20px;">
         
         <!-- 显示标题 -->
-        <h1 style="font-weight: bold; font-size: 60px; margin-bottom: 20px;">
+        <h1 style="font-weight: bold; font-size: 60px; margin-bottom: 0;">
             2M-EC Predictive Platform
         </h1>
     </div>
@@ -37,6 +37,7 @@ st.markdown("""
         • Low-risk probability = 1 - Highest cancer probability<br>
     </p>
 """, unsafe_allow_html=True)
+
 
 # 加载标准器和模型
 scalers = {
