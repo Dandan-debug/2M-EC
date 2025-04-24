@@ -5,10 +5,10 @@ import pandas as pd
 
 # At the beginning of your Streamlit code (right after imports, before any other content)
 st.markdown("""
-    <h1 style='text-align: center; font-weight: bold; font-size: 28px; margin-bottom: 20px;'>
+    <h1 style='text-align: center; font-weight: bold; font-size: 30px; margin-bottom: 20px;'>
         2M-EC Predictive Platform
     </h1>
-    <p style='text-align: center; font-size: 16px; margin-bottom: 30px;'>
+    <p style='text-align: letf; font-size: 16px; margin-bottom: 28px;'>
         The 2M-EC (Bimodal Multilevel Endometrial Cancer) is designed  for patient-centered minimally invasive ENDOM screening with high sensitivity and precise diagnosis.<br>
         Utilizes multiple models to calculate cancer risk probabilities, where:<br>
         • High-risk probability = Highest cancer probability across models<br>
