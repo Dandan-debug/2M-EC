@@ -15,31 +15,26 @@ from PIL import Image
 # image_url = "https://github.com/Dandan-debug/2M-EC/raw/main/endometrial.svg"
 # st.image(image_url, width=150, caption="Uploaded Image", use_column_width=False)
 
-# 使用 flexbox 布局实现图片和标题并排显示
+import streamlit as st
+
+# 使用 Flexbox 布局实现图片和描述文本并排显示
 st.markdown("""
     <div style="display: flex; align-items: center; margin-bottom: 20px;">
         <!-- 显示图片，减小大小 -->
         <div style="flex-shrink: 0; margin-right: 20px;">
-            <img src="https://github.com/Dandan-debug/2M-EC/raw/main/endometrial.svg" width="100" alt="Endometrial Cancer Model Image">
+            <img src="https://github.com/Dandan-debug/2M-EC/raw/main/endometrial.svg" width="150" alt="Endometrial Cancer Model Image">
         </div>
 
-        <!-- 显示标题 -->
+        <!-- 显示描述文本 -->
         <div>
-            <h1 style="font-weight: bold; font-size: 50px; margin: 0;">
-                2M-EC Predictive Platform
-            </h1>
+            <p style="font-size: 16px; margin-bottom: 28px;">
+                The 2M-EC (Bimodal Multilevel Endometrial Cancer) is designed for patient-centered minimally invasive ENDOM screening with high sensitivity and precise diagnosis.<br>
+                Utilizes multiple models to calculate cancer risk probabilities, where:<br>
+                • High-risk probability = Highest cancer probability across models<br>
+                • Low-risk probability = 1 - Highest cancer probability<br>
+            </p>
         </div>
     </div>
-""", unsafe_allow_html=True)
-
-# 显示描述文本
-st.markdown("""
-    <p style='text-align: left; font-size: 16px; margin-bottom: 28px;'>
-        The 2M-EC (Bimodal Multilevel Endometrial Cancer) is designed for patient-centered minimally invasive ENDOM screening with high sensitivity and precise diagnosis.<br>
-        Utilizes multiple models to calculate cancer risk probabilities, where:<br>
-        • High-risk probability = Highest cancer probability across models<br>
-        • Low-risk probability = 1 - Highest cancer probability<br>
-    </p>
 """, unsafe_allow_html=True)
 
 # 加载标准器和模型
