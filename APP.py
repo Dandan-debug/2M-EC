@@ -3,25 +3,48 @@ import joblib
 import numpy as np
 import pandas as pd
 
-# 在 Streamlit 中显示标题
+# 使用 Markdown 或 HTML 来定义左侧和右侧内容
 st.markdown("""
-    <h1 style='text-align: center; font-weight: bold; font-size: 50px; margin-bottom: 20px;'>
-        2M-EC Predictive Platform
-    </h1>
-""", unsafe_allow_html=True)
+    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <!-- 左侧内容 -->
+        <div style="flex: 1; padding-right: 20px;">
+            <h1 style="text-align: center; font-weight: bold; font-size: 50px; margin-bottom: 20px;">
+                2M-EC Predictive Platform
+            </h1>
+            <p style="font-size: 16px; margin-bottom: 20px;">
+                Some data is shown below, together with the line of best fit for that data. There is a formula for finding that best fit line, but it can be more efficient to find the line instead using the iterative procedure of gradient descent.
+            </p>
 
-# 显示图片（直接使用 GitHub 上的原始图片 URL）
-image_url = "https://github.com/Dandan-debug/2M-EC/raw/main/endometrial.svg"
-st.image(image_url, width=150, caption="Uploaded Image", use_column_width=False)
+            <!-- 输入数据部分 -->
+            <h2>Input Data</h2>
+            <label for="learning_rate">What learning rate?</label>
+            <input type="range" id="learning_rate" min="0.000" max="0.200" step="0.001" value="0.010">
+            <br>
+            <label for="batch_size">What batch size?</label>
+            <input type="range" id="batch_size" min="1" max="20" value="1">
+        </div>
 
-# 显示描述文本
-st.markdown("""
-    <p style='text-align: left; font-size: 16px; margin-bottom: 28px;'>
-        The 2M-EC (Bimodal Multilevel Endometrial Cancer) is designed for patient-centered minimally invasive ENDOM screening with high sensitivity and precise diagnosis.<br>
-        Utilizes multiple models to calculate cancer risk probabilities, where:<br>
-        • High-risk probability = Highest cancer probability across models<br>
-        • Low-risk probability = 1 - Highest cancer probability<br>
-    </p>
+        <!-- 右侧内容 -->
+        <div style="flex: 1; padding-left: 20px;">
+            <h2>Model Image</h2>
+            <!-- 显示图片 -->
+            <img src="https://github.com/Dandan-debug/2M-EC/raw/main/endometrial.svg" width="150" alt="Model Image">
+
+            <h2>Description</h2>
+            <p style="font-size: 16px;">
+                The 2M-EC (Bimodal Multilevel Endometrial Cancer) is designed for patient-centered minimally invasive ENDOM screening with high sensitivity and precise diagnosis.
+            </p>
+
+            <!-- 提交按钮 -->
+            <button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px;">
+                Submit
+            </button>
+
+            <!-- 预测输出 -->
+            <h2>Prediction Output</h2>
+            <p id="prediction_output">Here will be the prediction result.</p>
+        </div>
+    </div>
 """, unsafe_allow_html=True)
 
 # 加载标准器和模型
