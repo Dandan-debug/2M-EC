@@ -21,8 +21,8 @@ st.markdown("""
         <!-- 显示图片，减小大小 -->
         <img src="https://github.com/Dandan-debug/2M-EC/raw/main/endometrial.svg" width="150" alt="Endometrial Cancer Model Image" style="margin-right: 20px;">
         
-        <!-- 显示标题 -->
-        <h1 style="font-weight: bold; font-size: 60px; margin-bottom: 0;">
+        <!-- 显示标题，修正 margin 和字体大小 -->
+        <h1 style="font-weight: bold; font-size: 50px; margin: 0;">
             2M-EC Predictive Platform
         </h1>
     </div>
