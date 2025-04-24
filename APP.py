@@ -15,21 +15,12 @@ from PIL import Image
 # image_url = "https://github.com/Dandan-debug/2M-EC/raw/main/endometrial.svg"
 # st.image(image_url, width=150, caption="Uploaded Image", use_column_width=False)
 
-# 使用 flexbox 布局使图片和标题垂直排列
+# 显示图片（图片在上，标题在下）
 st.markdown("""
-    <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 50px;">
-        <!-- 显示图片，减小大小 -->
-        <div style="flex-shrink: 0; margin-bottom: 20px;">
-            <img src="https://github.com/Dandan-debug/2M-EC/raw/main/endometrial.svg" width="100" alt="Endometrial Cancer Model Image">
-        </div>
-
-        <!-- 显示标题 -->
-        <div>
-            <h1 style="font-weight: bold; font-size: 40px; margin: 0;">
-                2M-EC Predictive Platform
-            </h1>
-        </div>
-    </div>
+    <img src="https://github.com/Dandan-debug/2M-EC/raw/main/endometrial.svg" width="100" alt="Endometrial Cancer Model Image" style="display: block; margin: 0 auto 20px;">
+    <h1 style="font-weight: bold; font-size: 50px; text-align: center; margin: 0;">
+        2M-EC Predictive Platform
+    </h1>
 """, unsafe_allow_html=True)
 
 # 显示描述文本
