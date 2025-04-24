@@ -5,9 +5,14 @@ import pandas as pd
 
 # At the beginning of your Streamlit code (right after imports, before any other content)
 st.markdown("""
-    <h1 style='text-align: center; font-weight: bold; font-size: 30px; margin-bottom: 20px;'>
+    <h1 style='text-align: center; font-weight: bold; font-size: 50px; margin-bottom: 20px;'>
         2M-EC Predictive Platform
     </h1>
+
+    # 显示图片（直接使用 GitHub 上的原始图片 URL）
+image_url = "https://github.com/Dandan-debug/2M-EC/raw/main/endometrial.svg"
+st.image(image_url, width=150, caption="Uploaded Image", use_column_width=False)
+    
     <p style='text-align: letf; font-size: 16px; margin-bottom: 28px;'>
         The 2M-EC (Bimodal Multilevel Endometrial Cancer) is designed  for patient-centered minimally invasive ENDOM screening with high sensitivity and precise diagnosis.<br>
         Utilizes multiple models to calculate cancer risk probabilities, where:<br>
@@ -70,9 +75,6 @@ additional_features = {
           'UM2132.0', 'UM3513.0', 'UM790.0', 'UM8349.0', 'UM2093.0',
           'UM4210.0', 'UM3935.0', 'UM4256.0']
 }
-
-# Streamlit界面
-st.title("2M-EC Predictive Platform")
 
 # 模型选择
 selected_models = st.multiselect(
