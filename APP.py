@@ -6,18 +6,15 @@ import pandas as pd
 # At the beginning of your Streamlit code (right after imports, before any other content)
 st.markdown("""
     <h1 style='text-align: center; font-weight: bold; font-size: 28px; margin-bottom: 20px;'>
-        The 2M-EC (Bimodal Multilevel Endometrial Cancer) Risk Stratification
+        2M-EC Predictive Platform
     </h1>
     <p style='text-align: center; font-size: 16px; margin-bottom: 30px;'>
-        Patient-centered design for minimally invasive ENDOM screening with high sensitivity and precise diagnosis.<br>
+        The 2M-EC (Bimodal Multilevel Endometrial Cancer) is designed  for patient-centered minimally invasive ENDOM screening with high sensitivity and precise diagnosis.<br>
         Utilizes multiple models to calculate cancer risk probabilities, where:<br>
         • High-risk probability = Highest cancer probability across models<br>
         • Low-risk probability = 1 - Highest cancer probability<br>
     </p>
 """, unsafe_allow_html=True)
-
-# Remove or comment out your existing title line:
-# st.title("2M-EC Predictive Platform") 
 
 # 加载标准器和模型
 scalers = {
