@@ -4,16 +4,29 @@ import numpy as np
 import pandas as pd
 from PIL import Image
 
-# 在 Streamlit 中显示标题
-st.markdown("""
-    <h1 style='text-align: center; font-weight: bold; font-size: 60px; margin-bottom: 20px;'>
-        2M-EC Predictive Platform
-    </h1>
-""", unsafe_allow_html=True)
+# # 在 Streamlit 中显示标题
+# st.markdown("""
+#     <h1 style='text-align: center; font-weight: bold; font-size: 30px; margin-bottom: 20px;'>
+#         2M-EC Predictive Platform
+#     </h1>
+# """, unsafe_allow_html=True)
 
-# 显示图片（直接使用 GitHub 上的原始图片 URL）
-image_url = "https://github.com/Dandan-debug/2M-EC/raw/main/endometrial.svg"
-st.image(image_url, width=150, caption="Uploaded Image", use_column_width=False)
+# # 显示图片（直接使用 GitHub 上的原始图片 URL）
+# image_url = "https://github.com/Dandan-debug/2M-EC/raw/main/endometrial.svg"
+# st.image(image_url, width=150, caption="Uploaded Image", use_column_width=False)
+
+# 使用 Flexbox 布局使标题和图片并排显示
+st.markdown("""
+    <div style="display: flex; align-items: center; justify-content: flex-start;">
+        <!-- 显示图片，减小大小 -->
+        <img src="https://github.com/Dandan-debug/2M-EC/raw/main/endometrial.svg" width="100" alt="Model Image" style="margin-right: 20px;">
+        
+        <!-- 显示标题 -->
+        <h1 style="font-weight: bold; font-size: 60px; margin-bottom: 20px;">
+            2M-EC Predictive Platform
+        </h1>
+    </div>
+""", unsafe_allow_html=True)
 
 # 显示描述文本
 st.markdown("""
