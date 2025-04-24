@@ -3,18 +3,21 @@ import joblib
 import numpy as np
 import pandas as pd
 
-# At the beginning of your Streamlit code (right after imports, before any other content)
+# 在 Streamlit 中显示标题
 st.markdown("""
     <h1 style='text-align: center; font-weight: bold; font-size: 50px; margin-bottom: 20px;'>
         2M-EC Predictive Platform
     </h1>
+""", unsafe_allow_html=True)
 
-    # 显示图片（直接使用 GitHub 上的原始图片 URL）
+# 显示图片（直接使用 GitHub 上的原始图片 URL）
 image_url = "https://github.com/Dandan-debug/2M-EC/raw/main/endometrial.svg"
 st.image(image_url, width=150, caption="Uploaded Image", use_column_width=False)
-    
-    <p style='text-align: letf; font-size: 16px; margin-bottom: 28px;'>
-        The 2M-EC (Bimodal Multilevel Endometrial Cancer) is designed  for patient-centered minimally invasive ENDOM screening with high sensitivity and precise diagnosis.<br>
+
+# 显示描述文本
+st.markdown("""
+    <p style='text-align: left; font-size: 16px; margin-bottom: 28px;'>
+        The 2M-EC (Bimodal Multilevel Endometrial Cancer) is designed for patient-centered minimally invasive ENDOM screening with high sensitivity and precise diagnosis.<br>
         Utilizes multiple models to calculate cancer risk probabilities, where:<br>
         • High-risk probability = Highest cancer probability across models<br>
         • Low-risk probability = 1 - Highest cancer probability<br>
