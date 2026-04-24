@@ -14,8 +14,13 @@ st.markdown("""
     </h1>
 """, unsafe_allow_html=True)
 
-# 在标题的 st.markdown 之后，描述文字的 st.markdown 之前，插入：
-st.info("🆕 **The updated v1.0.1 website is now available at** https://2e-mc-web-1-0-1.streamlit.app/ — you can now upload MS data Excel files directly on the platform.")
+st.markdown("""
+<div style='background-color:#d0e8ff; padding:12px; border-radius:8px; font-size:15px;'>
+🆕 <b>The updated v1.0.1 website is now available at</b> 
+<a href='https://2e-mc-web-1-0-1.streamlit.app/'>https://2e-mc-web-1-0-1.streamlit.app/</a> 
+— you can now upload MS data Excel files directly on the platform.
+</div>
+""", unsafe_allow_html=True)
 
 # 显示描述文本
 st.markdown("""
